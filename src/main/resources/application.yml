@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+
+wechat:
+  mpAppId: wx51b8038f332c258d
+  mpAppSecret: cee90c419fa9c8904101dc09f8f2d7a1
+
+projecturl:
+  wechatMpAuthorize: http://tenement-wechat.s1.natapp.cc
+  wechatOpenAuthorize: http://tenement-wechat.s1.natapp.cc
+  doMain: http://tenement-wechat.s1.natapp.cc

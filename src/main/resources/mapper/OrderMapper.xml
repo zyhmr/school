@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shjd.mapper.OrderMapper" >
+  <resultMap id="BaseResultMap" type="com.shjd.pojo.Order" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="one_card_id" property="oneCardId" jdbcType="INTEGER" />
+    <result column="one_card_no" property="oneCardNo" jdbcType="VARCHAR" />
+    <result column="card_no" property="cardNo" jdbcType="VARCHAR" />
+    <result column="money" property="money" jdbcType="DECIMAL" />
+    <result column="pay_way" property="payWay" jdbcType="INTEGER" />
+    <result column="consume_type" property="consumeType" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id,one_card_id,one_card_no,card_no,money,pay_way,consume_type
+  </sql>
+</mapper>

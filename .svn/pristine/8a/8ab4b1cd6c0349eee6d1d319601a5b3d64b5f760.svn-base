@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shjd.mapper.CardInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.shjd.pojo.CardInfo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="student_id" property="studentId" jdbcType="INTEGER" />
+    <result column="card_phone" property="cardPhone" jdbcType="VARCHAR" />
+    <result column="id_card" property="idCard" jdbcType="VARCHAR" />
+    <result column="card_no" property="cardNo" jdbcType="VARCHAR" />
+    <result column="enbank_name" property="enbankName" jdbcType="VARCHAR" />
+    <result column="bank_name" property="bankName" jdbcType="VARCHAR" />
+    <result column="abbreviation" property="abbreviation" jdbcType="VARCHAR" />
+    <result column="cardprefix_num" property="cardprefixNum" jdbcType="VARCHAR" />
+    <result column="cardprefix_length" property="cardprefixLength" jdbcType="VARCHAR" />
+    <result column="card_type" property="cardType" jdbcType="VARCHAR" />
+    <result column="card_name" property="cardName" jdbcType="VARCHAR" />
+    <result column="card_length" property="cardLength" jdbcType="VARCHAR" />
+    <result column="bank_url" property="bankUrl" jdbcType="VARCHAR" />
+    <result column="bank_image" property="bankImage" jdbcType="VARCHAR" />
+    <result column="service_phone" property="servicePhone" jdbcType="VARCHAR" />
+    <result column="is_credit_card" property="isCreditCard" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARBINARY" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+        id,student_id,card_phone,id_card,card_no,enbank_name,bank_name,abbreviation,cardprefix_num,cardprefix_length,card_type,card_name,card_length,bank_url,bank_image,service_phone,is_credit_card,name
+    </sql>
+</mapper>

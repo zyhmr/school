@@ -1,0 +1,47 @@
+server:
+  port: 80
+  tomcat:
+    basedir: /static/tmp
+    uri-encoding: utf-8
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    name: mysql
+    url: jdbc:mysql://192.168.1.173:3306/student?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: student
+    password: onecard
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+  webflux:
+    static-path-pattern: /static/**
+  servlet:
+    multipart:
+      max-file-size: 30mb
+      max-request-size: 150mb
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+  messages:
+    encoding: utf-8
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+logging:
+  level:
+    com.shjd.mapper: debug
+
+pagehelper:
+  helper-dialect: mysql
+  support-methods-arguments: true
+  params: count=countSql
+mybatis:
+  type-aliases-package: com.shjd.mapper
+  mapper-locations: classpath:mapper/*.xml

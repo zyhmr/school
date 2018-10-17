@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shjd.mapper.OneCardInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.shjd.pojo.OneCardInfo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="card_no" property="cardNo" jdbcType="VARCHAR" />
+    <result column="open_id" property="openId" jdbcType="VARCHAR" />
+    <result column="card_pwd" property="cardPwd" jdbcType="VARCHAR" />
+    <result column="balance" property="balance" jdbcType="DECIMAL" />
+    <result column="card_statu" property="cardStatu" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id,card_no,open_id,card_pwd,balance,card_statu,create_time,update_time
+  </sql>
+
+  <update id="binding" >
+    update one_card_info set open_id=#{openId,jdbcType=VARCHAR},update_time=now() where card_no=#{cardNo,jdbcType=VARCHAR}
+  </update>
+  <select id="exists" resultMap="BaseResultMap">
+    select * from one_card_info where open_id=#{openId,jdbcType=VARCHAR}
+  </select>
+  <select id="findAll" resultMap="BaseResultMap">
+    select * from one_card_info
+  </select>
+
+</mapper>
